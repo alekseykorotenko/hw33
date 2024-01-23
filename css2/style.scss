@@ -1,0 +1,169 @@
+@import 'reset';
+@import 'global';
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Nunito', sans-serif;
+}
+
+.left-sidebar,
+.main-content,
+.right-sidebar {
+  border: 1px solid $main-color;
+  text-align: center;
+}
+
+.wrapper {
+  flex: 1;
+  display: flex;
+}
+
+#shopping-cart-section,
+#shopping-cart-title,
+#products-section,
+#products-info,
+.order-form,
+.order-delete,
+.order-details {
+  display: none;
+}
+
+ol,
+ul,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+  list-style: none;
+  padding: 5px 0;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.order-form {
+  margin: 20px 0 0;
+}
+
+.form-item {
+  display: block;
+  margin: 20px auto 0;
+}
+
+textarea {
+  display: block;
+  margin: 0 auto;
+  padding: 30px;
+  border-width: 1px;
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
+  border-style: groove;
+  border-radius: 11px;
+  box-shadow: 0px 0px 6px rgba(66, 66, 66, 0.75);
+  text-shadow: 0px 0px 0px rgba(66, 66, 66, 0.75);
+}
+
+.header {
+  background-color: $secondary-color;
+  color: $title-color;
+  text-align: center;
+  padding: 10px;
+  font-size: 3rem;
+  padding: 20px 0;
+}
+
+.left-sidebar,
+.right-sidebar {
+  flex: 0 0 300px;
+  padding-top: 30px;
+  background-color: $sides-color;
+  color: $main-color;
+
+  #orders-button,
+  #buy-button,
+  #form-submit,
+  .order-delete,
+  #back-button {
+    padding: 10px 40px;
+    background-color: $title-color;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    color: $main-color;
+    &:hover {
+      background-color: lighten($title-color, 5%);
+    }
+    &:active {
+      transform: scale(0.99);
+      background-color: darken($title-color, 10%);
+    }
+  }
+
+  #product-details {
+    font-size: 1.75rem;
+    padding-bottom: 15px;
+  }
+
+  #buy-button,
+  #form-submit {
+    font-size: 1rem;
+  }
+
+  .form-header {
+    font-size: 1.37rem;
+    margin: 0;
+  }
+
+  #full-name,
+  #city,
+  #delivery-branch,
+  #quantity {
+    width: 80%;
+    padding: 10px 0 10px 5px;
+    border-radius: 15px;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: $title-color;
+  padding-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.category,
+#product-list > li,
+.order-title {
+  font-size: 1.75rem;
+  padding-bottom: 15px;
+  &:hover {
+    transform: scale(1.2);
+    transition: 1s all;
+    text-decoration: underline;
+  }
+}
+
+.form-item,
+.order-details > li {
+  font-size: 1.25rem;
+  padding-bottom: 10px;
+}
+
+.main-content {
+  width: 100%;
+  flex: 1;
+  background-color: $bg-color;
+  padding: 30px;
+  color: lighten($secondary-color, 10%);
+  h2 {
+    color: lighten($title-color, 10%);
+  }
+}
