@@ -185,6 +185,12 @@ function showUserOrders() {
       });
     });
   });
+
+  const backButton = document.getElementById('back-button');
+  backButton.addEventListener('click', () => {
+    shoppingCart.style.display = 'none';
+    categoriesSection.style.display = 'block';
+  });
 }
 
 function getOrdersTable(orders) {
@@ -204,23 +210,13 @@ function getOrdersTable(orders) {
             <button class="order-delete" value="${index}">Delete order</button>`;
     ordersList.push(orderDetails);
   });
+  ordersList.push(`<button id="back-button"> Go Back </button>`);
   return ordersList;
 }
 
 function removeOrder(index) {
   const currentOrders = getOrders();
-
-  console.log(currentOrders);
-
   currentOrders.splice(index, 1) || [];
-
-  // console.log(newOrders);
-  // console.log(currentOrders);
   localStorage.clear();
-  console.log(localStorage);
   localStorage.setItem('orders', JSON.stringify(currentOrders));
-
-  // console.log(newOrders);
-
-  // shoppingCart.reset();
 }
