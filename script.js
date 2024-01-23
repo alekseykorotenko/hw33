@@ -139,6 +139,7 @@ orderButton.addEventListener('click', () => {
   productsInfo.style.display = 'none';
   productDetails.style.display = 'none';
   productsSection.style.display = 'none';
+  orderForm.style.display = 'none';
   shoppingCart.style.display = 'block';
 
   showUserOrders();
