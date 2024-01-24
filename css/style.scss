@@ -176,3 +176,17 @@ h2 {
 #back-button {
   margin-top: 0;
 }
+
+@media (400px <= width <= 600px) {
+  .wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr;
+  }
+  .main-content {
+    width: auto;
+  }
+
+  #orders-button {
+    margin-bottom: 10px;
+  }
+}
