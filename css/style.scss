@@ -38,7 +38,7 @@ body {
 }
 
 li {
-  cursor: pointer;
+  // cursor: pointer;
   list-style: none;
   padding: 5px 0;
 }
@@ -142,6 +142,7 @@ h2 {
 .category,
 #product-list > li,
 .order-title {
+  cursor: pointer;
   font-size: 1.75rem;
   padding-bottom: 15px;
   &:hover {
@@ -166,4 +167,12 @@ h2 {
   h2 {
     color: lighten($title-color, 10%);
   }
+}
+
+.order-delete {
+  margin-bottom: 15px;
+}
+
+#back-button {
+  margin-top: 0;
 }

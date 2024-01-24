@@ -167,7 +167,6 @@ body {
 }
 
 li {
-  cursor: pointer;
   list-style: none;
   padding: 5px 0;
 }
@@ -297,6 +296,7 @@ h2 {
 .category,
 #product-list > li,
 .order-title {
+  cursor: pointer;
   font-size: 1.75rem;
   padding-bottom: 15px;
 }
@@ -323,4 +323,12 @@ h2 {
 }
 .main-content h2 {
   color: #f2f5da;
+}
+
+.order-delete {
+  margin-bottom: 15px;
+}
+
+#back-button {
+  margin-top: 0;
 }/*# sourceMappingURL=style.css.map */
